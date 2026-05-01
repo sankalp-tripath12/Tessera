@@ -1,9 +1,9 @@
 import React from 'react'
-import Tessera_logo from './assets/Tessera_logo.png'
+import Tessera_logo from '../assets/Tessera_logo.png'
 
-const App = () => {
+const Home = () => {
   return (
-    <>
+        <>
     <header>
      
       <nav className='navbar'>
@@ -20,4 +20,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Home
