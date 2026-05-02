@@ -1,12 +1,7 @@
-import React from 'react'
-import Tessera_logo from './assets/Tessera_logo.png'
-import Home from './pages/Home'
+import CityIntelligence from './pages/Cityintelligence/index'
 
 const App = () => {
-  return (
-    <Home />
-
-  )
+  return <CityIntelligence />
 }
 
 export default App
