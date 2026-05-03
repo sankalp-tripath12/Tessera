@@ -10,13 +10,13 @@ export default function Issue() {
   const [selected, setSelected] = useState("");
 
   const categories = [
-    { id: "pothole", label: "Pothole", icon: "🕳️", image: Image },
-    { id: "garbage", label: "Garbage", icon: "🗑️", image: Imagecopy1 },
-    { id: "water", label: "Water Leakage", icon: "💧", image: Imagecopy2 },
-    { id: "street", label: "Street Light", icon: "💡", image: Imagecopy3 },
-    { id: "air", label: "Air Quality", icon: "☁️", image: Imagecopy4 },
-    { id: "others", label: "Others", icon: "⋯", image: Imagecopy5 },
-  ];
+    { id: "pothole", label: "Pothole",    icon : "🕳️", image: Image },
+    { id: "garbage", label: "Water Leakage", icon: "🗑️", image: Imagecopy1 }, 
+    { id: "water", label: "Street Light", icon: "💧", image: Imagecopy2 },
+    { id: "air", label: "Garbage", icon: "☁️", image: Imagecopy4 }, 
+    { id: "others", label: "Air Quality", icon: "⋯", image: Imagecopy5 },
+    { id: "street", label: "Other", icon: "💡", image: Imagecopy3 },
+  ]; 
 
   const handleNext = () => {
     if (!selected) {
@@ -28,9 +28,9 @@ export default function Issue() {
 
   return (
     <>
-      <style>{`
+            <style>{`
         .container {
-          max-width: 420px;
+          max-width: 1000px;
           margin: auto;
           padding: 16px;
           font-family: Arial, sans-serif;
@@ -38,6 +38,7 @@ export default function Issue() {
 
         .header {
           display: flex;
+          // gap: 12px;
           align-items: center;
           justify-content: center;
           position: relative;
@@ -46,9 +47,8 @@ export default function Issue() {
         .back {
           position: absolute;
           left: 0;
-          color: #1f7a3f;
+          color: gray;
           cursor: pointer;
-          font-weight: bold;
         }
 
         .steps {
@@ -86,45 +86,42 @@ export default function Issue() {
         .grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 16px;
+          gap: 80px;
+
         }
 
         .card {
-          border-radius: 16px;
-          overflow: hidden;
-          border: 2px solid #eee;
-          background: white;
+          border: 1px solid #ddd;
+          border-radius: 12px;
+          padding: 20px;
+          text-align: center;
           cursor: pointer;
           transition: 0.2s;
+          
+        }
+        
+        .card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        .card:hover {
+          border-color: #23e166ff;
         }
 
         .card.selected {
           border: 2px solid #1f7a3f;
+          background: #11c54dff;
         }
 
-        .card-img {
-          width: 100%;
-          height: 150px;
-          object-fit: cover;
+        .icon {
+          font-size: 28px;
+          margin-bottom: 8px;
         }
 
-        .card-footer {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          padding: 12px;
-          background: #f9f9f9;
-        }
-
-        .icon-circle {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          background: orange;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 18px;
+        .label {
+          font-size: 14px;
         }
 
         .next-btn {
@@ -139,7 +136,6 @@ export default function Issue() {
           cursor: pointer;
         }
       `}</style>
-
       <div className="container">
 
         <div className="header">
