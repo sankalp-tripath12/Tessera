@@ -1,5 +1,4 @@
-// This file has all your zone data and helper functions
-// Every other file in your folder will import from here
+
 
 export function getHealthColor(score) {
   if (score >= 65) return '#22c55e'
