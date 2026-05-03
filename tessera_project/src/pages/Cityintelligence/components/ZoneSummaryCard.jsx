@@ -1,6 +1,4 @@
-// One card for one zone shown in the right panel
-// Highlights when the zone is selected on the map
-// Clicking the card also selects/deselects the zone
+
 
 import { useDashboardStore } from '../store/useDashboardStore'
 import { getHealthColor, getHealthLabel } from '../data/mockZones'
