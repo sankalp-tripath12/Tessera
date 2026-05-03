@@ -1,5 +1,5 @@
 import React from 'react'
-import Tessera_logo from '../assets/Tessera_logo.png'
+import Tessera_logo from "../../assets/Tessera_logo.png"
 import "./Footer.css"
 
 const Footer = () => {

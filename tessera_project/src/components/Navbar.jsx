@@ -7,7 +7,7 @@ const Navbar = () => {
     <header className='header'>
      
       <nav className='navbar'>
-         <img className='logo' src={Tessera_logo} alt="logo"  />
+         <img className='logo' src={Tessera_logo} alt="logo"/>
       <ul>
         <li><a href="">Home</a></li>
         <li><a href="">Dashboard</a></li>

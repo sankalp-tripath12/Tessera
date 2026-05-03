@@ -4,9 +4,10 @@
 ;
 
 }
-body {
+/* body {
   height: 2000px; /* temporary to check stick is working */
-}
+ */
+
 .header {
   position: sticky;
   top: 0;
@@ -14,21 +15,19 @@ body {
   background-color: white;
 }
 
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  padding: 0px 50px;
 }
 
 .navbar ul {
   display: flex;
-  gap: 50px; 
+  gap: 40px;
   list-style: none;
   margin: 0;
-  padding-left: 30%;
-  z-index: 1000;
-  
+  padding: 0;
 }
 
 .navbar a {
@@ -37,16 +36,16 @@ body {
 } 
 
 .btn{
-  background-color: lightgreen;
-  font-size: large;
+  background-color: #009900;
+  color: white;
+  font-size: 18px;
   border-radius: 20px;
   border: none;
   padding: 10px 20px;
   margin-right: 5%;
 }
 
-.logo{
-  width: 200px;
-  height: 100px;
-  margin-left: 2%;
+.logo {
+  height: 80px;
+  width: auto;
 }
