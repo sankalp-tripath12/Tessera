@@ -1,6 +1,4 @@
-// This file manages shared state for your entire page
-// When you click a zone on the map, this store updates
-// and the zone card on the right highlights automatically
+
 
 import { create } from 'zustand'
 import { ZONES } from '../data/mockZones'
