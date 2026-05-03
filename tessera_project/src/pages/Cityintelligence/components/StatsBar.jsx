@@ -1,5 +1,4 @@
-// 4 cards showing key numbers at the top of the page
-// Reads zones from the store to compute live averages
+
 
 import { useDashboardStore } from '../store/useDashboardStore'
 import { getHealthColor } from '../data/mockZones'
