@@ -1,6 +1,4 @@
-// The thin bar at the very top of the page
-// Shows one message at a time, switches every 3 seconds
-// Imports TICKER_MESSAGES from your own data folder
+
 
 import { useState, useEffect } from 'react'
 import { TICKER_MESSAGES } from '../data/mockZones'
