@@ -1,6 +1,4 @@
-// The dark Bangalore map
-// Each zone is a colored circle
-// Clicking a circle tells the store which zone is selected
+
 
 import { MapContainer, TileLayer, CircleMarker, Tooltip } from 'react-leaflet'
 import { useDashboardStore } from '../store/useDashboardStore'
