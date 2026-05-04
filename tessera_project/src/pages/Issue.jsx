@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+// import  Issuepage2 from './Issuepage2'
 import Image from "../assets/Image.png";
 import Imagecopy1 from "../assets/Imagecopy1.png";
 import Imagecopy2 from "../assets/Imagecopy2.png";
@@ -10,12 +12,12 @@ export default function Issue() {
   const [selected, setSelected] = useState("");
 
   const categories = [
-    { id: "pothole", label: "Pothole",    icon : "🕳️", image: Image },
-    { id: "garbage", label: "Water Leakage", icon: "🗑️", image: Imagecopy1 }, 
-    { id: "water", label: "Street Light", icon: "💧", image: Imagecopy2 },
-    { id: "air", label: "Garbage", icon: "☁️", image: Imagecopy4 }, 
-    { id: "others", label: "Air Quality", icon: "⋯", image: Imagecopy5 },
-    { id: "street", label: "Other", icon: "💡", image: Imagecopy3 },
+    {  image: Image },
+    { image: Imagecopy1 }, 
+    { image: Imagecopy2 },
+    { image: Imagecopy4 }, 
+    { image: Imagecopy5 },
+    { image: Imagecopy3 },
   ]; 
 
   const handleNext = () => {
@@ -30,15 +32,14 @@ export default function Issue() {
     <>
             <style>{`
         .container {
-          max-width: 1000px;
+          max-width: 600px;
           margin: auto;
           padding: 16px;
           font-family: Arial, sans-serif;
-        }
+      
 
-        .header {
+        .header { 
           display: flex;
-          // gap: 12px;
           align-items: center;
           justify-content: center;
           position: relative;
@@ -85,15 +86,15 @@ export default function Issue() {
 
         .grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 80px;
+          grid-template-columns: 1fr 1fr ;
+          gap: 60px;
 
         }
 
         .card {
-          border: 1px solid #ddd;
-          border-radius: 12px;
-          padding: 20px;
+          border: 2px solid #ddd;
+          border-radius: 15px;
+          padding: 10px;
           text-align: center;
           cursor: pointer;
           transition: 0.2s;
@@ -103,26 +104,15 @@ export default function Issue() {
         .card img {
           width: 100%;
           height: 200px;
-          object-fit: cover;
+
         }
 
         .card:hover {
-          border-color: #23e166ff;
+          border: 1px solid black;
+          background:  #373434ff;
+
         }
 
-        .card.selected {
-          border: 2px solid #1f7a3f;
-          background: #11c54dff;
-        }
-
-        .icon {
-          font-size: 28px;
-          margin-bottom: 8px;
-        }
-
-        .label {
-          font-size: 14px;
-        }
 
         .next-btn {
           margin-top: 20px;
@@ -133,7 +123,8 @@ export default function Issue() {
           border: none;
           border-radius: 25px;
           font-size: 16px;
-          cursor: pointer;
+          cursor: pointer; 
+
         }
       `}</style>
       <div className="container">
@@ -152,8 +143,9 @@ export default function Issue() {
         </div>
 
         <h3>What is the issue?</h3>
+        <br />
         <p className="subtitle">Select a category</p>
-
+          <br />
         <div className="grid">
           {categories.map((item) => (
             <div
@@ -164,17 +156,23 @@ export default function Issue() {
               <img src={item.image} alt={item.label} className="card-img" />
 
               <div className="card-footer">
-                <div className="icon-circle">{item.icon}</div>
-                <span>{item.label}</span>
+                
               </div>
-            </div>
+            </div> 
           ))}
         </div>
-
+          <br />
+          <br />
+          <br />
         <button className="next-btn" onClick={handleNext}>
           Next
         </button>
       </div>
+      {/* <Issuepage2 /> */}
     </>
   );
 }
+
+
+
+
