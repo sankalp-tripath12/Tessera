@@ -14,6 +14,25 @@ const Body_Home = () => {
         
         <button className="hero-buttons" style={{backgroundColor:"#009900",border:"none", fontSize:"16px", color:"white", padding:"15px 24px", borderRadius:"10px"}}>Report an Issue</button>
         <button className="hero-buttons" style={{ backgroundColor:"white",border:"1px solid green",fontSize:"16px", color:"green", padding:"15px 20px", borderRadius:"10px",marginLeft:"20px"   }}>View Issues</button>
+
+
+{/* stats section for No. of reports ,resolved cases ,ueser */}
+        <div className="hero-stats">
+      <div>
+        <h3>1,200+</h3>
+        <p>Reports</p>
+      </div>
+
+      <div>
+        <h3>950+</h3>
+        <p>Resolved</p>
+      </div>
+
+      <div>
+        <h3>300+</h3>
+        <p>Users</p>
+      </div>
+    </div>
         
       </div>
 

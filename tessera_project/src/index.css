@@ -3,6 +3,21 @@
   margin: 0;
 ;
 
+
+html, body, #root {
+  height: 100%;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
 }
 /* body {
   height: 2000px; /* temporary to check stick is working */

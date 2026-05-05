@@ -37,3 +37,27 @@
 .hero-buttons{
     margin-top: 20px;
 }
+
+
+/* stats section for No. of reports ,resolved cases ,ueser*/
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.hero-stats div {
+  text-align: left;
+}
+
+.hero-stats h3 {
+  font-size: 22px;
+  color: #009900;
+  margin-bottom: 5px;
+}
+
+.hero-stats p {
+  font-size: 14px;
+  color: #555;
+}
