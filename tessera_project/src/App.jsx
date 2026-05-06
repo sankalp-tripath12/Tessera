@@ -1,5 +1,5 @@
-import React from 'react'
 
+import CityIntelligence from './pages/Cityintelligence/index'
 import Home from './pages/Home'
 
 const App = () => {
@@ -9,6 +9,7 @@ const App = () => {
     <Home />
 
   )
+
 }
 
 export default App
