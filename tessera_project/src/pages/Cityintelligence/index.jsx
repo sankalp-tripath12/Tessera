@@ -3,6 +3,7 @@ import StatsBar          from './components/StatsBar'
 import CityMap           from './components/CityMap'
 import ZoneSummaryCard   from './components/ZoneSummaryCard'
 import { useDashboardStore } from './store/useDashboardStore'
+import Navbar from '../../components/Navbar'
 
 export default function CityIntelligence() {
   const zones             = useDashboardStore((s) => s.zones)
@@ -12,7 +13,7 @@ export default function CityIntelligence() {
 
   return (
     <div style={{ background: '#080c14', minHeight: '100vh', color: '#e2e8f0' }}>
-
+      <Navbar />
       <LiveTicker />
 
       <StatsBar />

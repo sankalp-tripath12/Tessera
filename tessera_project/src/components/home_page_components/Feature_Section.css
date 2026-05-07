@@ -1,0 +1,28 @@
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  background: #f0f0f0;
+  display: inline-block;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
