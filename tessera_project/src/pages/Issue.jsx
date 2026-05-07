@@ -1,5 +1,7 @@
+
 import React, { useState } from "react";
 
+import Navbar from '../components/Navbar'
 // import  Issuepage2 from './Issuepage2'
 import Image from "../assets/Image.png";
 import Imagecopy1 from "../assets/Imagecopy1.png";
@@ -36,7 +38,7 @@ export default function Issue() {
           margin: auto;
           padding: 16px;
           font-family: Arial, sans-serif;
-      
+        }
 
         .header { 
           display: flex;
@@ -126,7 +128,8 @@ export default function Issue() {
           cursor: pointer; 
 
         }
-      `}</style>
+      `}</style> 
+      <Navbar />
       <div className="container">
 
         <div className="header">
@@ -172,7 +175,4 @@ export default function Issue() {
     </>
   );
 }
-
-
-
 
