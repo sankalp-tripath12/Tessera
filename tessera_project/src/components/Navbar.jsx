@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Tessera_logo from '../assets/Tessera_logo.png'
 
 const Navbar = () => {
@@ -9,11 +10,10 @@ const Navbar = () => {
       <nav className='navbar'>
          <img className='logo' src={Tessera_logo} alt="logo"/>
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Dashboard</a></li>
-        <li><a href="">Issues</a></li>
-        <li><a href="">Report</a></li>
-        <li><a href="">City Intelligence</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/issue">Issues</Link></li>
+        <li><Link to="/report">Report</Link></li>
+        <li><Link to="/city-intelligence">City Intelligence</Link></li>
       </ul>
       <button className='btn'>Login</button>
     </nav>
