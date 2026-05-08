@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 
 export default function Issuepage2() {
   const [description, setDescription] = useState("There is a big pothole causing problems...");
@@ -146,6 +147,7 @@ export default function Issuepage2() {
           font-weight: bold;  
         }
       `}</style>
+      <Navbar />
 
       <div className="container">
         <div className="header">
