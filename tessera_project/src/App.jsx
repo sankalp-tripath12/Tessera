@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Issue from "./pages/Issue";
 import Issuepage2 from "./pages/Issuepage2";
 import Issuepage3 from "./pages/Issuepage3";
+import Report from "./pages/Report";
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
         path="/city-intelligence"
         element={<CityIntelligence />}
       />
+
+      {/* Report Page */}
+      <Route path="/report" element={<Report />} />
 
       {/* Issue Reporting Flow */}
       <Route path="/issue" element={<Issue />} />
