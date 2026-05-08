@@ -1,19 +1,39 @@
+
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from '../components/home_page_components/Footer'
 
 export default function Issuepage2() {
-  const [description, setDescription] = useState("There is a big pothole causing problems...");
+
+  const navigate = useNavigate();
+
+  const [description, setDescription] = useState(
+    "There is a big pothole causing problems..."
+  );
 
   const [location, setLocation] = useState(
-
-    "MG Road, Near Metro Station"); 
+    "MG Road, Near Metro Station"
+  );
 
   const [images, setImages] = useState([]);
 
   const handleImageUpload = (e) => {
     const files = Array.from(e.target.files);
-    const preview = files.map((file) => URL.createObjectURL(file));
+
+    const preview = files.map((file) =>
+      URL.createObjectURL(file)
+    );
+
     setImages((prev) => [...prev, ...preview]);
+  };
+
+  const handleNext = () => {
+    navigate("/issue/step3");
+  };
+
+  const handleBack = () => {
+    navigate("/issue");
   };
 
   return (
@@ -27,13 +47,14 @@ export default function Issuepage2() {
           font-family: Arial;
           background: #f5f5f5;
           border-radius: 20px;
-          
+          margin-top: 60px;
         }
 
-        .header {
+        .header2 {
           text-align: center;
           position: relative;
           font-weight: bold;
+          font-size: 22px;
         }
 
         .back {
@@ -66,7 +87,7 @@ export default function Issuepage2() {
 
         .step.done {
           background: #20ce63ff;
-          color: white ;
+          color: white;
         }
 
         .line {
@@ -78,16 +99,22 @@ export default function Issuepage2() {
         .label {
           margin-top: 20px;
           font-weight: bold;
-          color :  rgba(2, 2, 6, 1);
+          color: rgba(2, 2, 6, 1);
         }
 
         .input-box {
-          width:  500px;  
+          width: 100%;
           padding: 12px;
           border-radius: 12px;
           border: 1px solid #ddd;
           margin: 8px 0 16px;
           background: white;
+          box-sizing: border-box;
+        }
+
+        textarea.input-box {
+          min-height: 120px;
+          resize: none;
         }
 
         .map-box {
@@ -98,12 +125,12 @@ export default function Issuepage2() {
           align-items: center;
           justify-content: center;
           margin-bottom: 15px;
+          font-size: 40px;
         }
 
         .auto-text {
-          font-size: 18px;
+          font-size: 16px;
           color: #242424ff;
-          
         }
 
         .auto-text span {
@@ -114,14 +141,16 @@ export default function Issuepage2() {
         .photos {
           display: flex;
           gap: 10px;
+          flex-wrap: wrap;
+          margin-top: 10px;
         }
 
         .photo {
           width: 70px;
           height: 70px;
-          border-radius: 40px; 
+          border-radius: 10px;
+          object-fit: cover;
           background: #ccc;
-          // object-fit: cover;
         }
 
         .upload {
@@ -133,10 +162,12 @@ export default function Issuepage2() {
           align-items: center;
           justify-content: center;
           cursor: pointer;
+          font-size: 28px;
+          background: white;
         }
 
         .next-btn {
-          margin-top: 20px;
+          margin-top: 30px;
           width: 100%;
           padding: 14px;
           background: #1f7a3f;
@@ -144,26 +175,41 @@ export default function Issuepage2() {
           border: none;
           border-radius: 30px;
           font-size: 16px;
-          font-weight: bold;  
+          font-weight: bold;
+          cursor: pointer;
+        }
+
+        .next-btn:hover {
+          background: #166530;
         }
       `}</style>
+
       <Navbar />
 
       <div className="container">
-        <div className="header">
-          <span className="back">&lt; Back</span>
+
+        <div className="header2">
+          <span className="back" onClick={handleBack}>
+            &lt; Back
+          </span>
+
           Add Details
         </div>
+
         <div className="steps">
           <div className="step done">✓</div>
+
           <div className="line"></div>
+
           <div className="step active">2</div>
+
           <div className="line"></div>
+
           <div className="step">3</div>
         </div>
 
         <div className="label">Description</div>
-        <br />
+
         <textarea
           className="input-box"
           value={description}
@@ -171,7 +217,7 @@ export default function Issuepage2() {
         />
 
         <div className="label">Location</div>
-        <br />
+
         <div className="map-box">📍</div>
 
         <input
@@ -181,19 +227,24 @@ export default function Issuepage2() {
         />
 
         <div className="auto-text">
-          <br />
-          <br />
           Auto-detected zone: <span>Zone 2 — Indiranagar</span>
         </div>
 
         <div className="label">Add Photos</div>
+
         <div className="photos">
           {images.map((img, i) => (
-            <img key={i} src={img} className="photo" />
+            <img
+              key={i}
+              src={img}
+              alt="uploaded"
+              className="photo"
+            />
           ))}
 
           <label className="upload">
             +
+
             <input
               type="file"
               hidden
@@ -203,9 +254,18 @@ export default function Issuepage2() {
           </label>
         </div>
 
-        <br /><br />
-        <button className="next-btn">Next</button>
+        <button
+          className="next-btn"
+          onClick={handleNext}
+        >
+          Next
+        </button>
+          
       </div>
+      <br />
+      <br /><br />
+      <br />
+      <Footer />
     </>
   );
 }
