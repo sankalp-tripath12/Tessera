@@ -6,6 +6,7 @@ import Issue from "./pages/Issue";
 import Issuepage2 from "./pages/Issuepage2";
 import Issuepage3 from "./pages/Issuepage3";
 import Report from "./pages/Report";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
@@ -27,6 +28,8 @@ const App = () => {
       <Route path="/issue" element={<Issue />} />
       <Route path="/issue/step2" element={<Issuepage2 />} />
       <Route path="/issue/step3" element={<Issuepage3 />} />
+
+      <Route path="/login" element={<Login />} />
 
     </Routes>
   );
