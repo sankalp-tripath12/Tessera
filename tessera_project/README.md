@@ -1,16 +1,77 @@
-# React + Vite
+# 🌆 Tessera - Smart City Issue Reporting System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tessera is a web-based application that allows users to report and track civic issues like potholes, garbage overflow, water leakage, etc. The goal is to make cities smarter, cleaner, and more responsive.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- 📍 Report issues in your area
+- 📊 Dashboard to view all reports
+- 🔄 Track issue status (Pending, In Progress, Resolved)
+- 🔐 Login UI for users
+- 🎨 Clean and responsive UI
+- ⚡ Fast navigation using React Router
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React.js
+- **Build Tool:** Vite
+- **Styling:** CSS
+- **Routing:** React Router DOM
+- **Icons:** Lucide React
+
+---
+
+## 📂 Project Structure
+tessera_project/
+│
+├── src/
+│ ├── components/
+│ │ ├── Navbar.jsx
+│ │ ├── home_page_components/
+│ │ │ ├── Body_Home.jsx
+│ │ │ ├── Feature_Section.jsx
+│ │ │ └── Footer.jsx
+│ │
+│ ├── pages/
+│ │ ├── Home.jsx
+│ │ ├── Report.jsx
+│ │ ├── Issue.jsx
+│ │ ├── Issuepage2.jsx
+│ │ ├── Issuepage3.jsx
+│ │ └── Login.jsx
+│ │
+│ ├── App.jsx
+│ └── main.jsx
+│
+├── public/
+├── package.json
+└── README.md
+
+
+---
+
+## 🧠 Key Concepts Used
+
+- Reusable Components (Navbar, Footer, Feature Cards)
+- Dynamic Rendering using `.map()`
+- Props for passing data
+- React Router for navigation
+- Inline and external CSS styling
+
+---
+
+## ▶️ How to Run the Project
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+Then open:
+http://localhost:5173/
